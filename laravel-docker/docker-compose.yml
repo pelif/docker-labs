@@ -1,0 +1,63 @@
+version: '2'
+services: 
+    database: 
+        container_name: mysql57
+        image: mysql:5.7
+        volumes: 
+            - dbdata:/var/lib/mysql
+        environment: 
+            - "MYSQL_DATABASE=lara_env"
+            - "MYSQL_USER=laraenv"
+            - "MYSQL_PASSWORD=secret"
+            - "MYSQL_ROOT_PASSWORD=1234567"
+            - "MYSQL_PORT=3306"
+        ports: 
+            - 3306:3306    
+        networks: 
+            - appLaravel
+
+    app: 
+        container_name: laravel58
+        build: 
+            context: . 
+            dockerfile: app.Dockerfile
+        working_dir: /var/www
+        volumes: 
+            - /var/www/storage
+            - ./:/var/www
+        env_file: '.env'
+        environment: 
+            - "DB_HOST=database"
+            - "DB_PORT=3306"
+        links: 
+            - database
+        depends_on: 
+            - database
+        networks: 
+            - appLaravel    
+    
+    web: 
+        container_name: nginx
+        build: 
+            context: . 
+            dockerfile: web.Dockerfile
+        ports: 
+            - 80:80
+        links: 
+            - app
+        networks: 
+            - appLaravel    
+        volumes: 
+            - ./:/var/www 
+            - ./access.log:/var/log/nginx/access.log
+            - ./error.log:/var/log/nginx/error.log   
+
+networks: 
+    appLaravel:        
+volumes: 
+    dbdata:
+
+            
+
+
+    
