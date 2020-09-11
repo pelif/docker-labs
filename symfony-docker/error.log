@@ -1,0 +1,7 @@
+
+2020/09/11 03:19:25 [error] 27#27: *1 open() "/var/www/public/_wdt/c0f780" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /_wdt/c0f780 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2020/09/11 03:19:26 [error] 27#27: *1 open() "/var/www/public/favicon.ico" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2020/09/11 03:19:27 [error] 27#27: *1 open() "/var/www/public/_wdt/c0f780" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /_wdt/c0f780 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2020/09/11 03:19:28 [error] 27#27: *1 open() "/var/www/public/_wdt/c0f780" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /_wdt/c0f780 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2020/09/11 03:19:29 [error] 27#27: *1 open() "/var/www/public/_wdt/c0f780" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /_wdt/c0f780 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2020/09/11 03:19:30 [error] 27#27: *1 open() "/var/www/public/_wdt/c0f780" failed (2: No such file or directory), client: 172.23.0.1, server: localhost, request: "GET /_wdt/c0f780 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
